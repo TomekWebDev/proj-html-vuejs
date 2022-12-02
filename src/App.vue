@@ -1,28 +1,60 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <header>
+      <div class="time-contacts-container">
+        <div class="time"></div>
+        <div class="contacts"></div>
+      </div>
+      <div class="logo-menu-container">
+        <div class="logo">logo</div>
+        <div>VUE COMPONENT MENU WITH SUB-MENUS</div>
+      </div>
+      <div class="quadrato-fusions-acquisitions">
+        <!-- farlo quadrato con dentro gli elementi H input group e btn stondatoflex-end oppure dentro un div flexato end -->
+      </div>
+    </header>
+    <main>
+      <section class="about">
+        <div class="dark"></div>
+        <div class="light-gray"></div>
+      </section>
+      <section class="how-it-works">
+        <div class="stretto"></div>
+        <div class="largo100">numeri</div>
+      </section>
+      <section class="what-we-do">
+        <h2></h2>
+        <div class="contenitore-team">VUE CARD COMPONENT PERSONE</div>
+      </section>
+      <section class="logistics-solutions">
+        <div class="heading"></div>
+        <div class="gallery">VUE CARD COMPONENT FOTO</div>
+      </section>
+      <section class="newsletter"></section>
+    </main>
+    <footer>
+      <div class="principale"></div>
+      <div class="foot"></div>
+    </footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  components: {},
+};
 </script>
 
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  height: 200vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 </style>
