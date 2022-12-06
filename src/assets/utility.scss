@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.width100Container {
+    width: 100%;
+    margin: auto;
+}
+
+.width80Container {
+    width: 80%;
+    margin: auto;
+}
+
+.width70Container {
+    width: 70%;
+    margin: auto;
+}
+
+.width65Container {
+    width: 65%;
+    margin: auto;
+}
+
+.width60Container {
+    width: 60%;
+    margin: auto;
+}
+
+.width55Container {
+    width: 55%;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align--end {
+    align-items: flex-end;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.fixed {
+    position: fixed;
+    z-index: 1;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.width10 {
+    width: 10%;
+}
+
+.width20 {
+    width: 20%;
+}
+
+.width30 {
+    width: 30%;
+}
+
+.width40 {
+    width: 40%;
+}
+
+.width50 {
+    width: 50%;
+}
+
+.width60 {
+    width: 60%;
+}
+
+.width70 {
+    width: 70%;
+}
+
+.width80 {
+    width: 80%;
+}
+
+.width90 {
+    width: 90%;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.my-05 {
+    margin: .5rem 0;
+}
+
+.my-1 {
+    margin: 1rem 0;
+}
+
+.my-2 {
+    margin: 2rem 0;
+}
