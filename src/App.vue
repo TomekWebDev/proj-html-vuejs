@@ -246,27 +246,44 @@
         </div>
       </section>
     </main>
-    <footer>
-      <div class="nexgen-info w25">
-        <div>Logo</div>
+
+    <footer class="flex justify-between">
+      <div class="nexgen-info footer-card">
+        <div class="my-2">Logo</div>
         <p>build the smallest detail with a focus on feature availability.</p>
-        <div>
+        <div class="my-1">
           <span>IC</span>
           <span> +1 3347-343</span>
         </div>
-        <div>
+        <div class="my-1">
           <span>IC</span>
           <span> +1 3347-343</span>
         </div>
-        <div>
+        <div class="my-1">
           <span>IC</span>
           <span> +1 3347-343</span>
         </div>
-        <button class="no-bg-btn">BUY NEXGEN</button>
+        <button class="light-acqua-btn pill-btn my-2">BUY NEXGEN</button>
       </div>
-      <div class="footer-menu">
-        <!-- COMPONENT MENU CON SUB PAGES -->
+
+      <div
+        v-for="(elem, index) in pages"
+        :key="index"
+        class="footer-card footer-card-dark"
+      >
+        <h3 class="page-item-menu">{{ elem.name }}</h3>
+        <ul class="sub-pages-footer-menu">
+          <li v-for="(el, index) in elem.sub_pages" :key="index">
+            <div class="page-item-menu">{{ el.name }}</div>
+            <ul>
+              <li v-for="(e, index) in el.sub_sub_pages" :key="index">
+                <div class="page-item-menu">{{ e.name }}</div>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </div>
+
       <div class="foot"></div>
     </footer>
   </div>
@@ -424,8 +441,20 @@ h4 {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+.light-acqua-btn:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: all 1s;
+  color: #048383;
+  font-weight: 900;
+}
+
 .acqua-btn {
   background-color: #048383;
+}
+
+.acqua-btn:hover {
+  transform: scaleX(1.1);
+  transition: all 1s;
 }
 
 header {
@@ -625,7 +654,7 @@ header {
 
 .newsletter {
   background-image: url(./../public/img/bg-1.jpg);
-  padding: 5% 10%;
+  padding: 10% 10%;
   width: 100%;
   margin: auto;
   h2 {
@@ -657,5 +686,53 @@ header {
       margin-bottom: 1rem;
     }
   }
+}
+
+footer {
+  padding: 5% 10%;
+  background-image: linear-gradient(90deg, #111117, #22343e 85%);
+  color: lightgray;
+
+  .footer-card {
+    width: calc(90% / 6);
+    border-radius: 0.8rem;
+    padding: 1rem;
+
+    h3 {
+      text-transform: uppercase;
+    }
+
+    ul {
+      list-style: none;
+      text-transform: uppercase;
+    }
+
+    li {
+      margin: 1rem 0;
+      font-weight: 700;
+    }
+
+    .sub-pages-footer-menu {
+      margin-top: 3rem;
+    }
+  }
+
+  .page-item-menu:hover {
+    color: #048383;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
+  .footer-card-dark {
+    background-color: rgba(17, 17, 23, 0.5);
+  }
+
+  .footer-card-dark:hover {
+    top: -10px;
+    transition: all 1s ease-out;
+  }
+}
+
+.nexgen-info {
 }
 </style>
