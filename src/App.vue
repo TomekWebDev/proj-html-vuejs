@@ -191,19 +191,38 @@
           <!-- VUE CARD COMPONENT PERSONE -->
         </div>
       </section>
+
       <section class="logistics-solutions light">
         <h4>LOGISTIC SOLUTIONS</h4>
-        <h2>Structured Warehpuse</h2>
+        <h2>Structured Warehouse</h2>
         <p>
           We develop operational strategies with cuittomers to improve
           logistical efficiency.
         </p>
-        <div class="gallery">
-          <!-- VUE CARD COMPONENT FOTO -->
+        <div class="gallery flex flex-wrap justify-between">
+          <div class="pic-component">
+            <img src="./../public/img/news-1.jpg" alt="" />
+          </div>
+          <div class="pic-component">
+            <img src="./../public/img/news-2.jpg" alt="" />
+          </div>
+          <div class="pic-component">
+            <img src="./../public/img/news-3.jpg" alt="" />
+          </div>
+          <div class="pic-component">
+            <img src="./../public/img/news-4.jpg" alt="" />
+          </div>
+          <div class="pic-component">
+            <img src="./../public/img/news-5.jpg" alt="" />
+          </div>
+          <div class="pic-component">
+            <img src="./../public/img/news-2.jpg" alt="" />
+          </div>
         </div>
       </section>
-      <section class="newsletter">
-        <div class="left-section">
+
+      <section class="newsletter flex align-center justify-between">
+        <div class="newsletter-left">
           <h4>NEWSLETTER</h4>
           <h2>Know First</h2>
           <p>
@@ -212,10 +231,10 @@
             <span class="acqua-text">terms of use</span>.
           </p>
         </div>
-        <div class="right-section">
+        <div class="newsletter-right flex flex-wrap">
           <input type="text" placeholder="Name" />
           <input type="text" placeholder="Email" />
-          <button class="acqua-btn">SUBSCRIBE</button>
+          <button class="pill-btn acqua-btn">SUBSCRIBE</button>
           <div class="send-confirmation-messsage">
             <div>
               <!-- vif no bordo 2px solid rosso-->
@@ -270,20 +289,21 @@ export default {
           // secondo livello di profondità
           sub_pages: [
             {
-              name: "1-sub-page-1",
+              name: "sub1",
               link: "",
+              sub_sub_pages: [],
             },
             {
-              name: "1-sub-page-2",
+              name: "sub2",
               link: "",
               // terzo livello di profondità
-              sub_pages: [
+              sub_sub_pages: [
                 {
-                  name: "sub2-sub-page-1",
+                  name: "sub-sub1",
                   link: "",
                 },
                 {
-                  name: "sub2-sub-page-2",
+                  name: "sub-sub2",
                   link: "",
                 },
               ],
@@ -295,12 +315,14 @@ export default {
           link: "",
           sub_pages: [
             {
-              name: "2-sub-page-1",
+              name: "sub1",
               link: "",
+              sub_sub_pages: [],
             },
             {
-              name: "2-sub-page-2",
+              name: "sub2",
               link: "",
+              sub_sub_pages: [],
             },
           ],
         },
@@ -309,12 +331,23 @@ export default {
           link: "",
           sub_pages: [
             {
-              name: "3-sub-page-1",
+              name: "sub1",
               link: "",
+              sub_sub_pages: [
+                {
+                  name: "sub-sub1",
+                  link: "",
+                },
+                {
+                  name: "sub-sub2",
+                  link: "",
+                },
+              ],
             },
             {
-              name: "3-sub-page-2",
+              name: "sub2",
               link: "",
+              sub_sub_pages: [],
             },
           ],
         },
@@ -323,12 +356,14 @@ export default {
           link: "",
           sub_pages: [
             {
-              name: "4-sub-page-1",
+              name: "sub1",
               link: "",
+              sub_sub_pages: [],
             },
             {
-              name: "4-sub-page-2",
+              name: "sub2",
               link: "",
+              sub_sub_pages: [],
             },
           ],
         },
@@ -382,7 +417,7 @@ h4 {
   border: none;
   font-size: 1rem;
   cursor: pointer;
-  color: #aeb0b0;
+  color: white;
 }
 
 .light-acqua-btn {
@@ -566,6 +601,61 @@ header {
   text-align: center;
   h2 {
     color: white;
+  }
+}
+
+.logistics-solutions {
+  padding: 5% 10%;
+  text-align: center;
+}
+
+.gallery {
+  width: 100%;
+  margin: 0 0 0 0;
+}
+
+.pic-component {
+  width: 30%;
+  margin: 1.6rem 0;
+
+  img {
+    width: 100%;
+  }
+}
+
+.newsletter {
+  background-image: url(./../public/img/bg-1.jpg);
+  padding: 5% 10%;
+  width: 100%;
+  margin: auto;
+  h2 {
+    color: white;
+  }
+  p {
+    color: lightgray;
+  }
+
+  .newsletter-left {
+    width: 40%;
+  }
+
+  .newsletter-right {
+    width: 50%;
+
+    input {
+      width: 100%;
+      height: 3rem;
+      margin: 0.5rem 0;
+      background-color: lightgray;
+      border: none;
+      padding: 1.2rem;
+      font-family: Helvetica, sans-serif;
+      font-weight: 700;
+    }
+
+    button {
+      margin-bottom: 1rem;
+    }
   }
 }
 </style>
